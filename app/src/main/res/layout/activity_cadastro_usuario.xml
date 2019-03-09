@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.topspin.activity.CadastroUsuarioActivity"
+    android:id="@+id/activity_cadastro_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/act_fundo_grama"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_person_add"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/actCinza_claro"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/linearLayoutImg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:id="@+id/editNome"
+            android:textColor="@color/actBlack"
+            android:textColorHint="@color/actHint"
+            android:hint="Informe o nome."
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/editEmail"
+            android:textColor="@color/actBlack"
+            android:textColorHint="@color/actHint"
+            android:hint="Informe o email."
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/editSenha"
+            android:textColor="@color/actBlack"
+            android:textColorHint="@color/actHint"
+            android:hint="Informe a senha."
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spnEstados"
+            android:spinnerMode="dialog"
+            android:scrollbarSize="18sp" />
+
+        <Button
+            android:text="Cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCadastraUsuario"
+            android:background="@color/actAmarelo_dark"
+            android:textColor="@color/actBlack"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

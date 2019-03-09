@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <TextView
+                android:text="ROBINHO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtApelido"
+                android:textColor="@color/actBlack"
+                android:textSize="@dimen/act_txt5"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:text="LHE CONVIDOU PARA JOGAR."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNome"
+                android:layout_weight="1"
+                android:textColor="@color/actFundoToolbar"
+                android:textSize="@dimen/act_txt3"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="08/08/2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDataDoJogo"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt2"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:text="Qualquer horário"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPeriodoDoJogo"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt2"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Associação Atlética Banco do Brasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtLocalDoJogo"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt2"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Prefiro pela manhã."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtObservacao"
+                android:textColor="@color/actCinza_escuro"
+                android:textSize="@dimen/act_txt2"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dp"/>
+
+            <TextView
+                android:text="numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtId"
+                android:textColor="@color/actCinza_escuro"
+                android:textSize="@dimen/act_txt2"
+                android:gravity="right|center_vertical"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_help_outline"
+                android:id="@+id/imgStatus"
+                android:padding="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#406d94</color>
+    <color name="colorPrimaryDark">#2f582e</color>
+    <color name="colorAccent">#2D507C</color>
+
+    <color name="actMensagemInfo">#dae1ff</color>
+    <color name="actMensagemErro">#ffcfcf</color>
+    <color name="actMensagemAlerta">#fffbdb</color>
+
+    <color name="actWhite">#ffffff</color>
+    <color name="actBlack">#000000</color>
+    <color name="actTexto">#ffffff</color>
+    <color name="actHint">#888888</color>
+    <color name="actHint_dark">#333333</color>
+    <color name="actTitulo">#99CC00</color>
+
+    <color name="actFundoToolbar">#3A6C44</color>
+
+    <color name="actAmarelo">#F8CE19</color>
+    <color name="actAmarelo_dark">#afafaf</color>
+    <color name="actCinza_claro">#eeeeee</color>
+    <color name="actCinza_escuro">#999999</color>
+    <color name="actVermelho_escuro">#d40000</color>
+
+    <color name="actFundoAvaliacao">#769A0C</color>
+    <color name="actTituloForm">#000000</color>
+    <color name="actTextoForm">#888888</color>
+    <color name="gfcRuim">#F2E684</color>
+    <color name="gfcRegular">#FCE202</color>
+    <color name="gfcBom">#DAFDC0</color>
+    <color name="gfcOtimo">#6EFC05</color>
+</resources>

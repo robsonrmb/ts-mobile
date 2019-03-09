@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.topspin.activity.MainActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutLinearMain"
+            android:background="@drawable/act_dados_rapida">
+
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtApelido"
+                android:textColor="@color/actBlack"
+                android:textSize="@dimen/act_txt7"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Avaliações recebidas: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQuantidadesRecebidas"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQtdAvalRecebida"
+                    android:text="0"
+                    android:textColor="@color/actFundoAvaliacao"
+                    android:textSize="@dimen/act_txt5"
+                    android:gravity="left"
+                    android:layout_marginLeft="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Avaliações pendentes: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQuantidadesPendentes"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQtdAvalPendente"
+                    android:text="0"
+                    android:textColor="@color/actVermelho_escuro"
+                    android:textSize="@dimen/act_txt5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Quantidades de jogos: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQuantidadesJogos"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtQtdJogos"
+                    android:text="0"
+                    android:textColor="@color/actAmarelo_dark"
+                    android:textSize="@dimen/act_txt5"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_dados">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_dados"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dados"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cadastrais"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_convites">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_convites"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Meus"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="convites"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_jogos">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_jogos"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Últimos"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="jogos"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_avaliacoes">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_aval"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cadastrar"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="avaliações"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_pendentes">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_avalpend" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Avaliações"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="pendentes"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/layout_estatisticas">
+
+                        <ImageView
+                            android:layout_width="98dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/act_estat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estatísticas"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:orientation="horizontal"
+                    android:background="@color/actWhite">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+                    android:background="@color/actCinza_escuro"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/qdo_jogos"
+                        android:background="@color/actCinza_claro"
+                        android:paddingLeft="15dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_reply"/>
+
+                            <TextView
+                                android:text="Sequëncia dos últimos jogos ..."
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtUltimosJogos"
+                                android:textColor="@color/actBlack"
+                                android:textSize="@dimen/act_txt4"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@color/actCinza_claro"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo1"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo2"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_derrota"
+                                android:id="@+id/imgJogo3"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo4"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_derrota"
+                                android:id="@+id/imgJogo5"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_derrota"
+                                android:id="@+id/imgJogo6"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo7"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo8"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_derrota"
+                                android:id="@+id/imgJogo9"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/ic_vitoria"
+                                android:id="@+id/imgJogo10"
+                                android:paddingTop="5dp"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

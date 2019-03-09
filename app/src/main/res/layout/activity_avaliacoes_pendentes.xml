@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_avaliacoes_pendentes"
+    tools:context="br.com.topspin.activity.AvaliacoesPendentesActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <TextView
+        android:text="Clique no registro para confirmar avaliacao."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/txtFrase"
+        android:padding="10dp"
+        android:textColor="@color/actAmarelo_dark"
+        android:textSize="@dimen/act_txt4"
+        android:background="@color/actCinza_claro"
+        android:gravity="center" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idListaAvaliacoesPendentes"
+        android:layout_below="@+id/txtFrase" />
+
+</RelativeLayout>

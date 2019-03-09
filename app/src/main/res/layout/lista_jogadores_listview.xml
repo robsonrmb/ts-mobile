@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_person"
+            android:id="@+id/imgTipo"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="ROBINHO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtApelido"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:text="numero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtId"
+                    android:textColor="@color/actCinza_escuro"
+                    android:textSize="@dimen/act_txt1"
+                    android:gravity="right|center_vertical"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Robson Melo de Brito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNome"
+                android:layout_weight="1"
+                android:textColor="@color/actAmarelo_dark"
+                android:textSize="@dimen/act_txt2"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Guará 2 Brasília"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCidade"
+                    android:textColor="@color/actCinza_escuro"
+                    android:textSize="@dimen/act_txt1"
+                    android:gravity="right|center_vertical" />
+
+                <TextView
+                    android:text=" - "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actCinza_escuro"
+                    android:textSize="@dimen/act_txt1"
+                    android:gravity="right|center_vertical" />
+
+                <TextView
+                    android:text="DF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtEstado"
+                    android:textColor="@color/actCinza_escuro"
+                    android:textSize="@dimen/act_txt1"
+                    android:gravity="right|center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_action_emo_wink"
+                android:id="@+id/imgAmigo"
+                android:padding="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

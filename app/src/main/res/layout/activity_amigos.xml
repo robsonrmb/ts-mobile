@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_amigos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.topspin.activity.AmigosActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <TextView
+        android:text="Clique no registro para confirmar avaliacao."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/txtFrase"
+        android:padding="10dp"
+        android:textColor="@color/actAmarelo_dark"
+        android:textSize="@dimen/act_txt4"
+        android:background="@color/actCinza_claro"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/txtFrase">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/idListaJogadores" />
+
+    </LinearLayout>
+
+</RelativeLayout>

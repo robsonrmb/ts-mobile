@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1083130810457",
+    "firebase_url": "https://topspin-f80d8.firebaseio.com",
+    "project_id": "topspin-f80d8",
+    "storage_bucket": "topspin-f80d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083130810457:android:f59cb8f8c00c281b",
+        "android_client_info": {
+          "package_name": "br.com.topspin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083130810457-mjredq4i49oe82rd8j09ejlindqr4lpf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.topspin",
+            "certificate_hash": "5649d1ac6a244fa102793184e0f38b4dda915f5c"
+          }
+        },
+        {
+          "client_id": "1083130810457-a39n7jh4vhm08lt81pbviqtl2cs41p6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNs4E2U8wNQvg8NXYsfz7IBvfo9ysgiEo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083130810457-a39n7jh4vhm08lt81pbviqtl2cs41p6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

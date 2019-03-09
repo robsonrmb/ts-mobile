@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_estatisticas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.topspin.activity.EstatisticasActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNomeJogador"
+        android:textSize="@dimen/act_txt5"
+        android:textColor="@color/actAmarelo_dark"
+        android:gravity="center_horizontal|center"
+        android:padding="5dp"
+        android:layout_below="@+id/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/txtFaixaTitulo"
+        android:background="@color/actCinza_escuro"
+        android:layout_below="@+id/txtNomeJogador"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/corpoPagina"
+        android:layout_below="@+id/txtFaixaTitulo">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- gerais -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESTATÍSTICAS GERAIS (%)"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Estatísticas \nVitórias / Derrotas"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtNaoVD"
+                                android:text="Nenhum jogo \ncadastrado."
+                                android:textSize="@dimen/act_txt4"
+                                android:textColor="@color/actAmarelo_dark"
+                                android:gravity="center_horizontal|center"
+                                android:padding="5dp"
+                                android:visibility="invisible"/>
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/chart1"
+                                android:padding="5dp"
+                                android:layout_width="@dimen/act_graficoLargura"
+                                android:layout_height="@dimen/act_graficoAltura"
+                                android:layout_gravity="center"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TieBreaks \nvencidos / perdidos"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtNaoTie"
+                                android:text="Nenhum tiebreak \ninformado."
+                                android:textSize="@dimen/act_txt4"
+                                android:textColor="@color/actAmarelo_dark"
+                                android:gravity="center_horizontal|center"
+                                android:padding="5dp"
+                                android:visibility="invisible"/>
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/chart2"
+                                android:padding="5dp"
+                                android:layout_width="@dimen/act_graficoLargura"
+                                android:layout_height="@dimen/act_graficoAltura"
+                                android:layout_gravity="center"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- tecnicas -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESTATÍSTICAS TÉCNICAS (%)"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/estSaque"
+                            android:text="SAQUE"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartSaque"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FOREHAND"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartForehand"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BACKHAND"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartBackhand"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="VOLEIO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartVoleio"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SMASH"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartSmash"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- taticas e fiscias -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESTATÍSTICAS TÁTICAS E FÍSICAS (%)"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="OFENSIVO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartOfensivo"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DEFENSIVO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartDefensivo"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TÁTICO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartTatico"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="COMPETITIVO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartCompetitivo"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FÍSICO"
+                            android:textSize="@dimen/act_txt4"
+                            android:textColor="@color/actBlack"
+                            android:gravity="center_horizontal|center"
+                            android:padding="5dp" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/chartFisico"
+                            android:padding="5dp"
+                            android:layout_width="@dimen/act_graficoLargura"
+                            android:layout_height="@dimen/act_graficoAltura"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

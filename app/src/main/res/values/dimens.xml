@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="campos_avaliacao">18dp</dimen>
+    <dimen name="titulo_form">16dp</dimen>
+    <dimen name="texto_form">14dp</dimen>
+
+    <dimen name="act_txt1">12sp</dimen>
+    <dimen name="act_txt2">14sp</dimen>
+    <dimen name="act_txt3">16sp</dimen>
+    <dimen name="act_txt4">18sp</dimen>
+    <dimen name="act_txt5">24sp</dimen>
+    <dimen name="act_txt6">30sp</dimen>
+    <dimen name="act_txt7">36sp</dimen>
+    <dimen name="act_graficoAltura">100dp</dimen>
+    <dimen name="act_graficoLargura">150dp</dimen>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.topspin.activity.DadosCadastraisActivity"
+    android:id="@+id/activity_dados_cadastrais"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editNomeCompleto"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:textColorHint="@color/actHint"
+                    android:text=""
+                    android:hint="NOME"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editApelido"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:textColorHint="@color/actHint"
+                    android:text=""
+                    android:hint="APELIDO"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:id="@+id/editDataNasc"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:textColorHint="@color/actHint"
+                    android:text=""
+                    android:hint="dd/MM/aaaa"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editLocal"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:textColorHint="@color/actHint"
+                    android:text=""
+                    android:hint="CLUBE (local onde joga)"
+                    android:padding="10dp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/spnTipo"
+                    android:spinnerMode="dialog"
+                    android:scrollbarSize="18sp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/spnNivel"
+                    android:spinnerMode="dialog"
+                    android:scrollbarSize="18sp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/spnEstados"
+                    android:spinnerMode="dialog"
+                    android:scrollbarSize="18sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editCidade"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt5"
+                    android:textColorHint="@color/actHint"
+                    android:text=""
+                    android:hint="CIDADE"
+                    android:padding="10dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnComplementaDados"
+                    android:background="@color/actAmarelo_dark"
+                    android:text="Salvar" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

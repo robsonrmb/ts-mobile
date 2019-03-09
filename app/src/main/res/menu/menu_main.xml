@@ -1,0 +1,64 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".activity.MainActivity">
+
+    <item android:id="@+id/action_pesquisa"
+        android:title="@string/pesquisa"
+        android:orderInCategory="50"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_amigos"
+        android:title="@string/meus_amigos"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_group"
+        app:showAsAction="ifRoom" />
+
+    <!--
+    <item android:id="@+id/action_convites"
+        android:title="@string/meus_convites"
+        android:orderInCategory="150"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_ultimojogo"
+        android:title="@string/cadastrar_ultimos_jogos"
+        android:orderInCategory="160"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_avaliar"
+        android:title="@string/avaliaradversario"
+        android:orderInCategory="170"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_pendencias"
+        android:title="@string/avaliacoes_pendentes"
+        android:orderInCategory="180"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_estatisticas"
+        android:title="@string/minhas_estatisticas"
+        android:orderInCategory="190"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_dados"
+        android:title="@string/meus_dados_cadastrais"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    -->
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:orderInCategory="210"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_passos"
+        android:title="@string/passos"
+        android:orderInCategory="220"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_sair"
+        android:title="@string/sair"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+
+</menu>

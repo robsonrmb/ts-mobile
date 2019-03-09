@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_resultado_jogos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.topspin.activity.ResultadoJogosActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/editDataJogo"
+                android:textColor="@color/actBlack"
+                android:textSize="@dimen/act_txt5"
+                android:textColorHint="@color/actHint"
+                android:text=""
+                android:hint="dd/MM/aaaa" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/spinnerTipo"
+                android:spinnerMode="dialog"
+                android:scrollbarSize="18sp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/spinnerResultado"
+                android:spinnerMode="dialog"
+                android:scrollbarSize="18sp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/spinnerPlacar"
+                android:spinnerMode="dialog"
+                android:scrollbarSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/editTieVencidos"
+                android:textColor="@color/actBlack"
+                android:textSize="@dimen/act_txt5"
+                android:textColorHint="@color/actHint"
+                android:text=""
+                android:hint="Quant. de tiebreaks vencidos" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/editTiePerdidos"
+                android:textColor="@color/actBlack"
+                android:textSize="@dimen/act_txt5"
+                android:textColorHint="@color/actHint"
+                android:text=""
+                android:hint="Quant. de tiebreaks perdidos" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSalvar"
+                android:background="@color/actAmarelo_dark"
+                android:text="Salvar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

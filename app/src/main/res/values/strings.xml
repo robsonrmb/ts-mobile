@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AppTopSpin</string>
+    <string name="texto_validacao">Você recebeu um SMS para validação do seu número. Digite o código de validação abaixo.</string>
+
+    <!-- itens de menu -->
+    <string name="pesquisa">Pesquisa</string>
+    <string name="avaliaradversario">Avaliar adversário</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="avaliacoes_pendentes">Avaliacões pendentes</string>
+    <string name="cadastrar_ultimos_jogos">Cadastrar últimos jogos</string>
+    <string name="meus_convites">Meus Convites</string>
+    <string name="meus_dados_cadastrais">Meus dados cadastrais</string>
+    <string name="meus_amigos">Meus amigos</string>
+    <string name="minhas_estatisticas">Minhas estatísticas</string>
+    <string name="quero_jogar">Quero jogar</string>
+    <string name="settings">Configurações</string>
+    <string name="passos">Primeiros passos</string>
+    <string name="sair">Sair</string>
+</resources>

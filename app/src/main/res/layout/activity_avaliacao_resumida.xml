@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_avaliacao_resumida"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.topspin.activity.AvaliacaoResumidaActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerForm"
+        android:orientation="vertical"
+        android:background="@color/actCinza_claro"
+        android:padding="10dp"
+        android:layout_below="@+id/toolbar">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerEstados"
+            android:spinnerMode="dialog"
+            android:scrollbarSize="18sp"
+            android:padding="5dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerJogadores"
+            android:spinnerMode="dialog"
+            android:scrollbarSize="18sp"
+            android:padding="5dp" />
+
+        <!--
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nomePesquisaAutoComplete"
+            android:hint="Informe o nome"
+            android:textColor="@color/actBlack"
+            android:textSize="@dimen/act_txt5"
+            android:textColorHint="@string/actHint"
+            android:visibility="invisible" />
+        -->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/actCinza_escuro"
+        android:id="@+id/headerLinha"
+        android:layout_below="@+id/headerForm" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:layout_below="@+id/headerLinha"
+        android:layout_above="@+id/linearSalvarAvaliacao">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:text="AVALIACOES TECNICAS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actAmarelo_dark"
+                    android:textSize="@dimen/act_txt5"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="SAQUE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbSaque"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSaqueRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSaqueRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSaqueBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSaqueOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="FOREHAND"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbForehand"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtForehandRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtForehandRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtForehandBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtForehandOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="BACKHAND"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbBackhand"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtBackhandRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtBackhandRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtBackhandBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtBackhandOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="VOLEIO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbVoleio"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtVoleioRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtVoleioRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtVoleioBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtVoleioOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="SMASH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbSmash"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSmashRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSmashRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSmashBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtSmashOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="AVALIACOES TATICAS E FISICAS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actAmarelo_dark"
+                    android:textSize="@dimen/act_txt5"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="OFENSIVO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbOfensivo"
+                    android:max="2"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Pouco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtOfensivoPouco"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtOfensivoNormal"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Muito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtOfensivoMuito"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="DEFENSIVO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbDefensivo"
+                    android:max="2"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Pouco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDefensivoPouco"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDefensivoNormal"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Muito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDefensivoMuito"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="TATICO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbTatico"
+                    android:max="2"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Pouco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTaticoPouco"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTaticoNormal"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Muito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTaticoMuito"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="COMPETITIVO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbCompetitivo"
+                    android:max="2"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Pouco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtCompetitivoPouco"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtCompetitivoNormal"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Muito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtCompetitivoMuito"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/actCinza_escuro" />
+
+                <TextView
+                    android:text="PREPARO FÍSICO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actBlack"
+                    android:textSize="@dimen/act_txt4"
+                    android:background="@color/actCinza_claro"
+                    android:padding="5dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbFisico"
+                    android:max="3"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Ruim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtFisicoRuim"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtFisicoRegular"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="Bom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtFisicoBom"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:text="Otimo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtFisicoOtimo"
+                        android:textColor="@color/actCinza_escuro"
+                        android:textSize="@dimen/act_txt4"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearSalvarAvaliacao"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:text="SALVAR AVALIAÇÃO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSalvarAvaliacao"
+            android:background="@color/actCinza_escuro"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
